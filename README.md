@@ -1,20 +1,24 @@
 # vehcontrol
+
 NUI visual menu vehicle script for FiveM
 
 ## Features
+
 * Control
-- Hood
-- Trunk
-- Doors
-- Windows
-- Interior Light
-- Change Seats
+    - Hood
+    - Trunk
+    - Doors
+    - Windows
+    - Interior Light
+    - Change Seats
 
 ## Controls
+
 Open - ]
 Close - ESC
 
 ## License
+
 Copyright 2020 Manvaril
 
 This program is free software: you can redistribute it and/or modify

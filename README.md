@@ -14,8 +14,9 @@ NUI visual menu vehicle script for FiveM
 
 ## Controls
 
-Open - ]
-Close - ESC
+**Open** - ]
+
+**Close** - ESC
 
 ## License
 

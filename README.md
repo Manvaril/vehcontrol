@@ -12,11 +12,53 @@ NUI visual menu vehicle script for FiveM
     - Interior Light
     - Change Seats
 
-## Controls
+## NUI Controls
 
 **Open** - ]
-
 **Close** - ESC
+
+## Commands
+
+**/engine** - Start/Stop Vehicle Engine
+**/hood** - Open/Close Hood
+**/trunk** - Open/Close Trunk
+**/seat** [1-4]- Move Seat
+**/door** [1-4] - Open/Close Door
+**/window** [1-4] - Roll Up/Down Window
+**/windowfront** - Roll Up/Down Front Windows
+**/windowback** - Roll Up/Down Back Windows
+**/windowall** - Roll Up/Down All Windows
+
+**/vehcontrolclose** - Close NUI (in F8 if stuck open)
+
+## Config
+UseCommands [true/false] - Allow the use of /commands
+
+## TODO
+
+- Nothing Currently
+
+Feature request can be made [Here](https://github.com/Manvaril/vehcontrol/issues/new/choose)
+
+## Changelog
+
+**v1.1.0**
+- Fixed seat switching (was unable to move to driver from every seat)
+- Added config.lua with settings
+- Added /engine command
+- Added /hood command
+- Added /trunk command
+- Added /door command
+- Added /seat command
+- Added /window command
+- Added /windowfront command
+- Added /windowback command
+- Added /windowall command
+- Added vehcontrolclose command (use in F8 if NUI stuck open)
+- Restructured code to be modular with NUI and Commands
+
+**v1.0.0**
+- Initial Release
 
 ## License
 

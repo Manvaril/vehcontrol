@@ -26,5 +26,6 @@ files {
 }
 
 client_script {
+  'config.lua',
   'client.lua'
 }

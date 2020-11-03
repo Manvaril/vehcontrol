@@ -72,8 +72,9 @@
         $.post('http://vehcontrol/interiorLight', JSON.stringify({}));
       })
       $('#windowFrontLeft').click(function(){
-        $.post('http://vehcontrol/windowdriver', JSON.stringify({
-          window: 0
+        $.post('http://vehcontrol/windows', JSON.stringify({
+          window: 0,
+          door: 0
         }));
       })
       $('#doorFrontLeft').click(function(){
@@ -83,7 +84,7 @@
       })
       $('#seatFrontLeft').click(function(){
         $.post('http://vehcontrol/seatchange', JSON.stringify({
-          seat: "-1"
+          seat: -1
         }));
       })
       $('#seatFrontRight').click(function(){
@@ -97,13 +98,15 @@
         }));
       })
       $('#windowFrontRight').click(function(){
-        $.post('http://vehcontrol/windowpass', JSON.stringify({
-          window: 1
+        $.post('http://vehcontrol/windows', JSON.stringify({
+          window: 1,
+          door: 1
         }));
       })
       $('#windowRearLeft').click(function(){
-        $.post('http://vehcontrol/windowlpass', JSON.stringify({
-          window: 2
+        $.post('http://vehcontrol/windows', JSON.stringify({
+          window: 2,
+          door: 2
         }));
       })
       $('#doorRearLeft').click(function(){
@@ -127,8 +130,9 @@
         }));
       })
       $('#windowRearRight').click(function(){
-        $.post('http://vehcontrol/windowrpass', JSON.stringify({
-          window: 3
+        $.post('http://vehcontrol/windows', JSON.stringify({
+          window: 3,
+          door: 3
         }));
       })
     </script>

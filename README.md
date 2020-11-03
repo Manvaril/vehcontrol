@@ -15,18 +15,27 @@ NUI visual menu vehicle script for FiveM
 ## NUI Controls
 
 **Open** - ]
+
 **Close** - ESC
 
 ## Commands
 
 **/engine** - Start/Stop Vehicle Engine
+
 **/hood** - Open/Close Hood
+
 **/trunk** - Open/Close Trunk
+
 **/seat** [1-4]- Move Seat
+
 **/door** [1-4] - Open/Close Door
+
 **/window** [1-4] - Roll Up/Down Window
+
 **/windowfront** - Roll Up/Down Front Windows
+
 **/windowback** - Roll Up/Down Back Windows
+
 **/windowall** - Roll Up/Down All Windows
 
 **/vehcontrolclose** - Close NUI (in F8 if stuck open)

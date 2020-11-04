@@ -42,6 +42,7 @@ NUI visual menu vehicle script for FiveM
 
 ## Config
 UseCommands [true/false] - Allow the use of /commands
+DisableSeatShuffle [true/false] - Allow auto-seat shuffle from passenger to driver
 
 ## TODO
 
@@ -50,6 +51,10 @@ UseCommands [true/false] - Allow the use of /commands
 Feature request can be made [Here](https://github.com/Manvaril/vehcontrol/issues/new/choose)
 
 ## Changelog
+
+**v1.1.1**
+- Fix Auto-Seat Shuffle
+- Add DisableSeatShuffle [true/false] flag to config
 
 **v1.1.0**
 - Fixed seat switching (was unable to move to driver from every seat)

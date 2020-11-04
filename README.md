@@ -42,6 +42,7 @@ NUI visual menu vehicle script for FiveM
 
 ## Config
 UseCommands [true/false] - Allow the use of /commands
+
 DisableSeatShuffle [true/false] - Allow auto-seat shuffle from passenger to driver
 
 ## TODO

@@ -8,7 +8,7 @@ Citizen.CreateThread(function()
     while true do
 		Citizen.Wait(0)
 		if IsPedInAnyVehicle(PlayerPedId(), false) then
-			if ( IsControlJustReleased( 0, 40 ) or IsDisabledControlJustReleased( 0, 40 ) ) and GetLastInputMethod( 0 ) not IsPauseMenuActive() then -- Key to open NUI https://docs.fivem.net/docs/game-references/controls/
+			if ( IsControlJustReleased( 0, 40 ) or IsDisabledControlJustReleased( 0, 40 ) ) and GetLastInputMethod( 0 ) and not IsPauseMenuActive() then -- Key to open NUI https://docs.fivem.net/docs/game-references/controls/
 				openVehControl()
 			end
 		end

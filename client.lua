@@ -7,6 +7,17 @@ local windowState4 = true
 Citizen.CreateThread(function()
     while true do
 		Citizen.Wait(0)
+		if LeaveRunning then
+			local playerPed = GetPlayerPed(-1)
+			local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
+			if IsPedInAnyVehicle(playerPed, false) and IsControlPressed(2, 75) and not IsEntityDead(playerPed) then
+                Citizen.Wait(150)
+				if IsPedInAnyVehicle(playerPed, false) and IsControlPressed(2, 75) and not IsEntityDead(playerPed) then
+					SetVehicleEngineOn(vehicle, true, true, false)
+					TaskLeaveVehicle(playerPed, vehicle, 0)
+				end
+			end
+		end
 		if IsPedInAnyVehicle(PlayerPedId(), false) then
 			if ( IsControlJustReleased( 0, 40 ) or IsDisabledControlJustReleased( 0, 40 ) ) and GetLastInputMethod( 0 ) and not IsPauseMenuActive() then -- Key to open NUI https://docs.fivem.net/docs/game-references/controls/
 				openVehControl()

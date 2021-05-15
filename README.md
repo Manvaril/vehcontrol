@@ -11,6 +11,7 @@ NUI visual menu vehicle script for FiveM
     - Windows
     - Interior Light
     - Change Seats
+    - Leave Engine Running on Exit
 
 ## NUI Controls
 
@@ -45,6 +46,8 @@ UseCommands [true/false] - Allow the use of /commands
 
 DisableSeatShuffle [true/false] - Allow auto-seat shuffle from passenger to driver
 
+LeaveRunning [true/false] - Allow the engine to keep running on exit of the vehicle with a long F keypress
+
 ## TODO
 
 - Nothing Currently
@@ -52,6 +55,11 @@ DisableSeatShuffle [true/false] - Allow auto-seat shuffle from passenger to driv
 Feature request can be made [Here](https://github.com/Manvaril/vehcontrol/issues/new/choose)
 
 ## Changelog
+
+**v1.1.2**
+- Merged Pull request #2 by yhtrae, which added a fix for disabling the opening of the menu while in the ESC pause menu
+- Added ability to keep the engine running when you get out of the drivers seat
+- Add LeaveRunning [true/false] flag to config
 
 **v1.1.1**
 - Fix Auto-Seat Shuffle

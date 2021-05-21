@@ -31,6 +31,5 @@ client_script {
 }
 
 export {
-  'openVehControl',
-  'closeVehControl'
+  'openExternal'
 }

@@ -48,6 +48,11 @@ DisableSeatShuffle [true/false] - Allow auto-seat shuffle from passenger to driv
 
 LeaveRunning [true/false] - Allow the engine to keep running on exit of the vehicle with a long F keypress
 
+## Exporting
+
+To open the menu from another resource use this line
+>```exports.vehcontrol:openExternal()```
+
 ## TODO
 
 - Nothing Currently
@@ -55,6 +60,9 @@ LeaveRunning [true/false] - Allow the engine to keep running on exit of the vehi
 Feature request can be made [Here](https://github.com/Manvaril/vehcontrol/issues/new/choose)
 
 ## Changelog
+
+**v1.1.3**
+- Added Exports to call the menu from another resource
 
 **v1.1.2**
 - Merged Pull request #2 by yhtrae, which added a fix for disabling the opening of the menu while in the ESC pause menu

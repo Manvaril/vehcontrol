@@ -34,7 +34,7 @@ Citizen.CreateThread(function()
 end)
 
 -----------------------------------------------------------------------------
--- NUI OPEN EXPORT
+-- NUI OPEN EXPORT/EVENT
 -----------------------------------------------------------------------------
 
 function openExternal()
@@ -42,6 +42,13 @@ function openExternal()
 		openVehControl()
 	end
 end
+
+RegisterNetEvent('vehcontrol:openExternal')
+AddEventHandler('vehcontrol:openExternal', function()
+	if IsPedInAnyVehicle(PlayerPedId(), false) then
+		openVehControl()
+	end
+end)
 
 -----------------------------------------------------------------------------
 -- NUI OPEN/CLOSE FUNCTIONS

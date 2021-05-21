@@ -48,10 +48,16 @@ DisableSeatShuffle [true/false] - Allow auto-seat shuffle from passenger to driv
 
 LeaveRunning [true/false] - Allow the engine to keep running on exit of the vehicle with a long F keypress
 
-## Exporting
+## Exporting and Events
 
-To open the menu from another resource use this line
+The following ways can be used to open the menu from another resource depending on how the resource is coded
+
+Open menu from another resource with exports
 >```exports.vehcontrol:openExternal()```
+
+Open menu from another resource with events
+
+>```TriggerEvent("vehcontrol:openExternal")```
 
 ## TODO
 
@@ -60,6 +66,9 @@ To open the menu from another resource use this line
 Feature request can be made [Here](https://github.com/Manvaril/vehcontrol/issues/new/choose)
 
 ## Changelog
+
+**v1.1.4**
+- Added secondary way to call the menu using events
 
 **v1.1.3**
 - Added Exports to call the menu from another resource

@@ -2,7 +2,7 @@ resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
 
 author 'Manvaril'
 description 'Vehicle Door/Window/Seat/Engine/Dome Light NUI script'
-version '1.1.2'
+version '1.1.3b'
 
 ui_page "html/vehui.html"
 
@@ -28,4 +28,9 @@ files {
 client_script {
   'config.lua',
   'client.lua'
+}
+
+export {
+  'openVehControl',
+  'closeVehControl'
 }

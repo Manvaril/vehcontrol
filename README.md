@@ -56,7 +56,6 @@ Open menu from another resource with exports
 >```exports.vehcontrol:openExternal()```
 
 Open menu from another resource with events
-
 >```TriggerEvent("vehcontrol:openExternal")```
 
 ## TODO
@@ -66,6 +65,9 @@ Open menu from another resource with events
 Feature request can be made [Here](https://github.com/Manvaril/vehcontrol/issues/new/choose)
 
 ## Changelog
+
+**v1.1.5**
+- Added new manifest file [#10](https://github.com/Manvaril/vehcontrol/issues/10)
 
 **v1.1.4**
 - Added secondary way to call the menu using events

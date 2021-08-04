@@ -3,6 +3,7 @@ local windowState1 = true
 local windowState2 = true
 local windowState3 = true
 local windowState4 = true
+local underGlowState = true
 
 Citizen.CreateThread(function()
     while true do
@@ -90,6 +91,10 @@ RegisterNUICallback('interiorLight', function()
 	InteriorLightControl()
 end)
 
+RegisterNUICallback('underGlow', function()
+	UnderGlowControl()
+end)
+
 RegisterNUICallback('doors', function(data, cb)
 	DoorControl(data.door)
 end)
@@ -121,6 +126,27 @@ function InteriorLightControl()
 			SetVehicleInteriorlight(vehicle, false)
 		else
 			SetVehicleInteriorlight(vehicle, true)
+		end
+	end
+end
+
+function UnderGlowControl()
+	local playerPed = GetPlayerPed(-1)
+	if (IsPedSittingInAnyVehicle(playerPed)) then
+		local vehicle = GetVehiclePedIsIn(playerPed, false)
+
+		if underGlowState == false and not IsVehicleNeonLightEnabled(vehicle, 0) then
+			SetVehicleNeonLightEnabled(vehicle, 0, true)
+			SetVehicleNeonLightEnabled(vehicle, 1, true)
+			SetVehicleNeonLightEnabled(vehicle, 2, true)
+			SetVehicleNeonLightEnabled(vehicle, 3, true)
+			underGlowState = true
+		else
+			SetVehicleNeonLightEnabled(vehicle, 0, false)
+			SetVehicleNeonLightEnabled(vehicle, 1, false)
+			SetVehicleNeonLightEnabled(vehicle, 2, false)
+			SetVehicleNeonLightEnabled(vehicle, 3, false)
+			underGlowState = false
 		end
 	end
 end

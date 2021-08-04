@@ -1,4 +1,4 @@
-fx_version 'cerulean'
+fx_version 'adamant'
 games { 'gta5' }
 
 author 'Manvaril'
@@ -23,7 +23,8 @@ files {
   "html/img/windowFrontRight.png",
   "html/img/windowRearLeft.png",
   "html/img/windowRearRight.png",
-  "html/img/interiorLight.png"
+  "html/img/interiorLight.png",
+  "html/img/underGlow.png"
 }
 
 client_script {

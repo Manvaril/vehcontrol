@@ -38,7 +38,7 @@ RegisterCommand("vehcontrol", function(source, args, rawCommand)
 	end
 end, false)
 
-RegisterKeyMapping('vehcontrol', 'Open Vehicle Menu', 'keyboard', 'RBRACKET') -- Key to open NUI, change only last peramiter (default: RBRACKET) https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+RegisterKeyMapping('vehcontrol', 'Open Vehicle Menu', 'keyboard', DefaultOpen)
 
 function openExternal()
 	if IsPedInAnyVehicle(PlayerPedId(), false) then

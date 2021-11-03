@@ -15,8 +15,11 @@ NUI visual menu vehicle script for FiveM
 
 ## NUI Controls
 
-**Open** - Script Default: ]
-    Client changeable via Settings->Keybinds->FiveM game menu
+**Open** - Script Default: HOME
+
+- Script Default can be changed via config
+
+- Client changeable via Settings->Keybinds->FiveM game menu
 
 **Close** - ESC
 
@@ -68,7 +71,8 @@ Feature request can be made [Here](https://github.com/Manvaril/vehcontrol/issues
 ## Changelog
 
 **v1.1.6**
-- Added KeyMapping so clients can change the keybind to open the menu
+- Added KeyMapping so clients can change the keybind in the game menu
+- Added Default Key to config
 
 **v1.1.5**
 - Added new manifest file [#10](https://github.com/Manvaril/vehcontrol/issues/10)

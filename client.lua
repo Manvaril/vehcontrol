@@ -18,11 +18,6 @@ Citizen.CreateThread(function()
 				end
 			end
 		end
-		if IsPedInAnyVehicle(PlayerPedId(), false) then
-			if ( IsControlJustReleased( 0, 40 ) or IsDisabledControlJustReleased( 0, 40 ) ) and GetLastInputMethod( 0 ) and not IsPauseMenuActive() then -- Key to open NUI https://docs.fivem.net/docs/game-references/controls/
-				openVehControl()
-			end
-		end
 		if IsPedInAnyVehicle(GetPlayerPed(-1), false) and DisableSeatShuffle then
 			if GetPedInVehicleSeat(GetVehiclePedIsIn(GetPlayerPed(-1), false), 0) == GetPlayerPed(-1) then
 				if GetIsTaskActive(GetPlayerPed(-1), 165) then
@@ -36,6 +31,14 @@ end)
 -----------------------------------------------------------------------------
 -- NUI OPEN EXPORT/EVENT
 -----------------------------------------------------------------------------
+
+RegisterCommand("vehcontrol", function(source, args, rawCommand)
+	if IsPedInAnyVehicle(PlayerPedId(), false) and not IsPauseMenuActive() then
+		openVehControl()
+	end
+end, false)
+
+RegisterKeyMapping('vehcontrol', 'Open Vehicle Menu', 'keyboard', DefaultOpen)
 
 function openExternal()
 	if IsPedInAnyVehicle(PlayerPedId(), false) then

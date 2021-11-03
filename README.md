@@ -52,6 +52,10 @@ DisableSeatShuffle [true/false] - Allow auto-seat shuffle from passenger to driv
 
 LeaveRunning [true/false] - Allow the engine to keep running on exit of the vehicle with a long F keypress
 
+DefaultOpen - This is they default key to open the menu, client can change in the game menu (Settings->Key Binds->FiveM)
+
+- USABLE KEY LIST https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+
 ## Exporting and Events
 
 The following ways can be used to open the menu from another resource depending on how the resource is coded

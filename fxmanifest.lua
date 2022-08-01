@@ -23,7 +23,8 @@ files {
   "html/img/windowFrontRight.png",
   "html/img/windowRearLeft.png",
   "html/img/windowRearRight.png",
-  "html/img/interiorLight.png"
+  "html/img/interiorLight.png",
+  "html/img/bombbay.png"
 }
 
 client_script {

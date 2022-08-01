@@ -11,7 +11,7 @@
     <div class="container">
       <div class="content">
         <div class="slot"><img id="ignition" src="img/ignition.png" /></div>
-        <div class="slot"></div>
+        <div class="slot"><img id="bombbay" src="img/bombbay.png" /></div>
         <div class="slot"><img id="frontHood" src="img/frontHood.png" /></div>
         <div class="slot"><img id="rearHood" src="img/rearHood.png" /></div>
         <div class="slot"><img id="rearHood2" src="img/rearHood2.png" /></div>
@@ -70,6 +70,9 @@
       })
       $('#interiorLight').click(function(){
         $.post('http://vehcontrol/interiorLight', JSON.stringify({}));
+      })
+      $('#bombbay').click(function(){
+        $.post('http://vehcontrol/bombbay', JSON.stringify({}));
       })
       $('#windowFrontLeft').click(function(){
         $.post('http://vehcontrol/windows', JSON.stringify({

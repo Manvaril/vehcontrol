@@ -12,6 +12,7 @@ NUI visual menu vehicle script for FiveM
     - Interior Light
     - Change Seats
     - Leave Engine Running on Exit
+    - Bomb Bay Doors
 
 ## NUI Controls
 
@@ -73,6 +74,9 @@ Open menu from another resource with events
 Feature request can be made [Here](https://github.com/Manvaril/vehcontrol/issues/new/choose)
 
 ## Changelog
+
+**v1.1.7**
+- Added Bomb Bay Doors [#22](https://github.com/Manvaril/vehcontrol/issues/22)
 
 **v1.1.6**
 - Added KeyMapping so clients can change the keybind in the game menu

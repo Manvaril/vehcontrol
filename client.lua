@@ -105,6 +105,10 @@ RegisterNUICallback('windows', function(data, cb)
 	WindowControl(data.window, data.door)
 end)
 
+RegisterNUICallback('bombbay', function()
+	BombBayControl()
+end)
+
 -----------------------------------------------------------------------------
 -- ACTION FUNCTIONS
 -----------------------------------------------------------------------------
@@ -248,6 +252,18 @@ function AllWindowControl()
 			windowState2 = true
 			windowState3 = true
 			windowState4 = true
+		end
+	end
+end
+
+function BombBayControl()
+	local playerPed = GetPlayerPed(-1)
+	if (IsPedSittingInAnyVehicle(playerPed)) then
+		local vehicle = GetVehiclePedIsIn(playerPed, false)
+		if AreBombBayDoorsOpen(vehicle) then
+			CloseBombBayDoors(vehicle)
+		else
+			OpenBombBayDoors(vehicle)
 		end
 	end
 end

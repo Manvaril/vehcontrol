@@ -8,7 +8,7 @@ Citizen.CreateThread(function()
     while true do
 		Citizen.Wait(0)
 		if LeaveRunning then
-			local playerPed = GetPlayerPed(-1)
+			local playerPed = PlayerPedId()
 			local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
 			if IsPedInAnyVehicle(playerPed, false) and IsControlPressed(2, 75) and not IsEntityDead(playerPed) then
                 Citizen.Wait(150)
@@ -18,10 +18,10 @@ Citizen.CreateThread(function()
 				end
 			end
 		end
-		if IsPedInAnyVehicle(GetPlayerPed(-1), false) and DisableSeatShuffle then
-			if GetPedInVehicleSeat(GetVehiclePedIsIn(GetPlayerPed(-1), false), 0) == GetPlayerPed(-1) then
-				if GetIsTaskActive(GetPlayerPed(-1), 165) then
-					SetPedIntoVehicle(GetPlayerPed(-1), GetVehiclePedIsIn(GetPlayerPed(-1), false), 0)
+		if IsPedInAnyVehicle(PlayerPedId(), false) and DisableSeatShuffle then
+			if GetPedInVehicleSeat(GetVehiclePedIsIn(PlayerPedId(), false), 0) == PlayerPedId() then
+				if GetIsTaskActive(PlayerPedId(), 165) then
+					SetPedIntoVehicle(PlayerPedId(), GetVehiclePedIsIn(PlayerPedId(), false), 0)
 				end
 			end
 		end
@@ -121,7 +121,7 @@ function EngineControl()
 end
 
 function InteriorLightControl()
-	local playerPed = GetPlayerPed(-1)
+	local playerPed = PlayerPedId()
 	if (IsPedSittingInAnyVehicle(playerPed)) then
 		local vehicle = GetVehiclePedIsIn(playerPed, false)
 		if IsVehicleInteriorLightOn(vehicle) then
@@ -133,7 +133,7 @@ function InteriorLightControl()
 end
 
 function DoorControl(door)
-	local playerPed = GetPlayerPed(-1)
+	local playerPed = PlayerPedId()
 	if (IsPedSittingInAnyVehicle(playerPed)) then
 		local vehicle = GetVehiclePedIsIn(playerPed, false)
 		if GetVehicleDoorAngleRatio(vehicle, door) > 0.0 then
@@ -145,17 +145,17 @@ function DoorControl(door)
 end
 
 function SeatControl(seat)
-	local playerPed = GetPlayerPed(-1)
+	local playerPed = PlayerPedId()
 	if (IsPedSittingInAnyVehicle(playerPed)) then
 		local vehicle = GetVehiclePedIsIn(playerPed, false)
 		if IsVehicleSeatFree(vehicle, seat) then
-			SetPedIntoVehicle(GetPlayerPed(-1), vehicle, seat)
+			SetPedIntoVehicle(PlayerPedId(), vehicle, seat)
 		end
 	end
 end
 
 function WindowControl(window, door)
-	local playerPed = GetPlayerPed(-1)
+	local playerPed = PlayerPedId()
 	if (IsPedSittingInAnyVehicle(playerPed)) then
 		local vehicle = GetVehiclePedIsIn(playerPed, false)
 		if window == 0 then
@@ -195,7 +195,7 @@ function WindowControl(window, door)
 end
 
 function FrontWindowControl()
-	local playerPed = GetPlayerPed(-1)
+	local playerPed = PlayerPedId()
 	if (IsPedSittingInAnyVehicle(playerPed)) then
 		local vehicle = GetVehiclePedIsIn(playerPed, false)
 		if windowState1 == true or windowState2 == true then
@@ -213,7 +213,7 @@ function FrontWindowControl()
 end
 
 function BackWindowControl()
-	local playerPed = GetPlayerPed(-1)
+	local playerPed = PlayerPedId()
 	if (IsPedSittingInAnyVehicle(playerPed)) then
 		local vehicle = GetVehiclePedIsIn(playerPed, false)
 		if windowState3 == true or windowState4 == true then
@@ -231,7 +231,7 @@ function BackWindowControl()
 end
 
 function AllWindowControl()
-	local playerPed = GetPlayerPed(-1)
+	local playerPed = PlayerPedId()
 	if (IsPedSittingInAnyVehicle(playerPed)) then
 		local vehicle = GetVehiclePedIsIn(playerPed, false)
 		if windowState1 == true or windowState2 == true or windowState3 == true or windowState4 == true then
